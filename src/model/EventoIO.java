@@ -1,6 +1,7 @@
 package model;
 
 import java.util.Vector;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 import core.Model;
@@ -44,7 +45,8 @@ public class EventoIO implements Model {
             for (Evento evento : eventos) {
                 Vector<Object> eventoInfo = new Vector<Object>();
                 
-                eventoInfo.add(evento.getDate()); // Data como Date object
+                SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+           		eventoInfo.add(sdf.format(evento.getDate()));
                 eventoInfo.add(evento.getDescricaoEvento());
                 eventoInfo.add(evento.getFrequencia());
                 eventoInfo.add(evento.getEmail());

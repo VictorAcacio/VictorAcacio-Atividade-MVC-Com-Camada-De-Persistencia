@@ -9,5 +9,4 @@ public interface EventoDAO {
     void excluir(int id);
     Evento buscarPorId(int id);
     List<Evento> listarTodos();
-    List<Evento> buscarPorDescricao(String descricao);
 }
